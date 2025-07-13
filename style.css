@@ -1,0 +1,110 @@
+/* Light Theme (default) */
+:root {
+  --bg-color: #E4EFE7;
+  --bg-color-container: #99BC85;
+  --text-color: #000000;
+  --options-bg-color: #eee;
+  --primary-color: #6200ea;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --bg-color-container: #444842;
+  --text-color: #ffffff;
+  --options-bg-color: #2a2a2a;
+  --primary-color: #bb86fc;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg-color);
+    padding: 30px;
+    text-align: center;
+    color: var(--text-color);
+  }
+  
+  .quiz-container {
+    background: var(--bg-color-container);
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 15vh;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .question {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .option {
+    background: var(--options-bg-color);
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .option:hover {
+    background: #ddd;
+  }
+  
+  .correct {
+    background-color: #c8e6c9 !important;
+    color: #2e7d32;
+  }
+  
+  .wrong {
+    background-color: #ffcdd2 !important;
+    color: #c62828;
+  }
+  
+  .disabled {
+    pointer-events: none;
+  }
+  
+  #next-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  #result {
+    text-align: center;
+    font-size: 22px;
+    margin-top: 30px;
+  }
+  #textarea:focus, input:focus{
+    outline: none;
+}
+input{
+  padding: 15px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  padding: 8px 12px;
+  font-size: 18px;
+  background: none;
+  border: 2px solid var(--text-color);
+  border-radius: 8px;
+  color: var(--text-color);
+  cursor: pointer;
+  z-index: 1000; /* ensures it stays on top */
+  transition: background 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
